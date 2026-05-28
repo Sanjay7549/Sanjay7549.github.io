@@ -1,0 +1,57 @@
+/* humans.txt — We are people, not machines. */
+
+/* =====================================================
+   TEAM
+   ===================================================== */
+Developer        : Sanjay Sinha
+Title            : Data Scientist & AI Engineer
+Location         : Pune, Maharashtra, India
+Email            : admin@${EMAIL_DOMAIN}
+LinkedIn         : https://linkedin.com/in/sanjay-sinha-09343b247
+GitHub           : https://github.com/Sanjay7549
+
+
+/* =====================================================
+   SITE
+   ===================================================== */
+Website          : https://${DOMAIN_NAME}
+Last Updated     : 2025-12-31
+Languages        : English, हिंदी
+Standards        : HTML5, CSS3, JavaScript (ES6+)
+IDE              : VS Code
+
+
+/* =====================================================
+   TECHNOLOGY STACK
+   ===================================================== */
+
+/* Frontend */
+Frontend         : HTML5, Tailwind CSS, Vanilla JavaScript
+Fonts            : Inter, Space Grotesk
+Icons            : Lucide Icons
+
+/* Backend & Infrastructure */
+Web Server       : Nginx (Alpine)
+Containers       : Docker
+Hosting          : Self-hosted Ubuntu VPS
+CDN & Security   : Cloudflare, Cloudflare Tunnel
+
+/* DevOps & CI/CD */
+CI/CD            : GitHub Actions
+Version Control  : Git
+Monitoring       : Google Analytics, Lighthouse CI
+
+
+/* =====================================================
+   PHILOSOPHY
+   ===================================================== */
+"Focus on the science in data science —
+ optimizing for latency, cost, and security."
+
+
+/* =====================================================
+   CREDITS
+   ===================================================== */
+Thanks to the open-source community.
+Built with passion for clean, performant,
+and secure web experiences.

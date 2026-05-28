@@ -1,0 +1,922 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <!-- 1. PRECONNECTS (Performance) -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://static.cloudflareinsights.com">
+
+    <!-- Essential Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+    <title>Sanjay Sinha | AI &amp; Data Scientist</title>
+    <link rel="canonical" href="https://${DOMAIN_NAME}">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Sanjay Sinha is a Data Scientist at Michelin specializing in Enterprise RAG systems, Azure OpenAI, LlamaIndex, LangChain, and production AI pipelines. Expert in secure LLM architectures, vector databases, and mathematical modeling.">
+
+    <meta name="author" content="Sanjay Sinha">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Geographic Meta -->
+    <meta name="geo.region" content="IN-MH">
+    <meta name="geo.placename" content="Pune">
+    <meta name="geo.position" content="18.5204;73.8567">
+    <meta name="ICBM" content="18.5204, 73.8567">
+
+    <!-- Language
+         hreflang="hi" removed: this page is English-only.
+         Declaring Hindi would tell Google to rank it for Hindi speakers,
+         which hurts English ranking and sends contradictory signals.
+         en-IN is correct — the content is English, the target region is India. -->
+    <link rel="alternate" hreflang="en-IN" href="https://${DOMAIN_NAME}">
+    <link rel="alternate" hreflang="x-default" href="https://${DOMAIN_NAME}">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://${DOMAIN_NAME}">
+    <meta property="og:site_name" content="Sanjay Sinha">
+    <meta property="og:title" content="Sanjay Sinha | AI &amp; Data Scientist | Enterprise RAG Expert">
+    <meta property="og:description"
+        content="Data Scientist at Michelin specializing in Enterprise RAG systems, Azure OpenAI, LlamaIndex, mathematical modeling and production AI architectures.">
+    <meta property="og:image" content="https://${DOMAIN_NAME}/images/profile.webp">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="409">
+    <meta property="og:image:alt" content="Profile photo of Sanjay Sinha">
+    <!-- article:* tags removed — they are only valid when og:type is "article".
+         Using them with og:type="website" is malformed and ignored by parsers. -->
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://${DOMAIN_NAME}">
+    <meta property="twitter:title" content="Sanjay Sinha | AI &amp; Data Scientist | Enterprise RAG Expert">
+    <meta property="twitter:description"
+        content="Data Scientist at Michelin specializing in Enterprise RAG systems, Azure OpenAI, LlamaIndex, mathematical modeling and production AI architectures.">
+    <meta property="twitter:image" content="https://${DOMAIN_NAME}/images/profile.webp">
+
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+    <!-- CRITICAL CSS & FONTS (Inlined to prevent CLS) -->
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/Inter-Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            /* Used in buttons/nav */
+            font-display: swap;
+            src: url('fonts/Inter-SemiBold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 700;
+            /* Used in main title */
+            font-display: swap;
+            src: url('fonts/SpaceGrotesk-Bold.woff2') format('woff2');
+        }
+    </style>
+
+    <!-- Preloads (Performance) -->
+    <link rel="preload" href="fonts/SpaceGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="preload" as="image" href="images/profile.webp">
+
+    <link rel="preload" href="styles.css" as="style">
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Icons (Hosted Locally for CSP Safety) -->
+    <script src="js/lucide.min.js" defer></script>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Main Logic -->
+    <script src="js/main.js" defer></script>
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Sanjay Sinha - Project Updates"
+        href="https://${DOMAIN_NAME}/rss.xml">
+
+    <!-- Structured Data / Schema.org -->
+
+    <!-- Person Schema
+         FIX: @context changed from http to https — consistent with all other schemas.
+         FIX: HTML entity &amp; replaced with plain & — JSON is not HTML;
+              &amp; is an HTML entity and is technically malformed inside JSON. -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Sanjay Sinha",
+            "jobTitle": "Data Scientist",
+            "description": "AI & Data Scientist specializing in Enterprise RAG systems, Azure OpenAI, mathematical modeling and production AI architectures",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Michelin"
+            },
+            "url": "https://${DOMAIN_NAME}",
+            "sameAs": [
+                "https://linkedin.com/in/sanjay-sinha-09343b247",
+                "https://github.com/Sanjay7549",
+                "mailto:admin@${EMAIL_DOMAIN}"
+            ],
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Chennai Mathematical Institute"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Pune",
+                "addressRegion": "Maharashtra",
+                "addressCountry": "India"
+            },
+            "image": "https://${DOMAIN_NAME}/images/profile.webp",
+            "knowsAbout": [
+                "Artificial Intelligence",
+                "Machine Learning",
+                "RAG Systems",
+                "Azure OpenAI",
+                "LangChain",
+                "LlamaIndex",
+                "Python",
+                "Data Science",
+                "Deep Learning",
+                "Natural Language Processing"
+            ]
+        }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://${DOMAIN_NAME}"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About",
+                "item": "https://${DOMAIN_NAME}/#about"
+            },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Experience",
+                "item": "https://${DOMAIN_NAME}/#experience"
+            },{
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Projects",
+                "item": "https://${DOMAIN_NAME}/#projects"
+            },{
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Contact",
+                "item": "https://${DOMAIN_NAME}/#contact"
+            }]
+        }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Michelin",
+            "url": "https://www.michelin.com",
+            "employee": {
+                "@type": "Person",
+                "name": "Sanjay Sinha",
+                "jobTitle": "Data Scientist",
+                "url": "https://${DOMAIN_NAME}"
+            }
+        }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "What technologies does Sanjay Sinha specialize in?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sanjay specializes in Enterprise RAG systems, Azure OpenAI (GPT-4o, GPT-4o-mini), LangChain, LlamaIndex, LlamaCloud parsing, Qdrant vector database, Mistral AI, Docker, Kubernetes, FastAPI, and mathematical modeling. He focuses on building secure, scalable AI architectures for production environments."
+                }
+            },{
+                "@type": "Question",
+                "name": "What is Sanjay's experience with RAG systems?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sanjay is the lead architect for Michelin's primary Enterprise RAG system. He has implemented advanced model routing between GPT-4o and GPT-4o-mini, reducing latency from 10-12s to 6-7s while optimizing costs. His work includes LlamaCloud integration, OpenTelemetry observability, and ForgeRock OAuth security."
+                }
+            },{
+                "@type": "Question",
+                "name": "Where is Sanjay Sinha located?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sanjay is based in Pune, Maharashtra, India and works as a Data Scientist at Michelin India Pvt. Ltd."
+                }
+            },{
+                "@type": "Question",
+                "name": "What is Sanjay's educational background?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sanjay holds an M.Sc in Data Science from Chennai Mathematical Institute (CMI), completed in 2024. His education focused on mathematical rigor, combining theoretical foundations with practical AI engineering."
+                }
+            }]
+        }
+    </script>
+
+    <!-- WebSite Schema
+         FIX: HTML entity &amp; replaced with plain & in JSON.
+         FIX: inLanguage changed from ["en", "hi"] to "en" — this page is
+              English-only. Declaring Hindi contradicts the hreflang correction above. -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Sanjay Sinha - AI & Data Scientist",
+            "url": "https://${DOMAIN_NAME}",
+            "description": "Portfolio and professional website of Sanjay Sinha, Data Scientist specializing in Enterprise RAG systems and Azure AI",
+            "author": {
+                "@type": "Person",
+                "name": "Sanjay Sinha"
+            },
+            "inLanguage": "en"
+        }
+    </script>
+</head>
+
+<body
+    class="antialiased font-sans bg-lightBg text-gray-900 dark:bg-darkBg dark:text-gray-200 selection:bg-primary selection:text-white transition-colors duration-300">
+
+    <!-- Skip Navigation: improves accessibility and Lighthouse score.
+         Visually hidden until focused via keyboard — no effect on appearance. -->
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded focus:shadow-lg">
+        Skip to content
+    </a>
+
+    <!-- Fixed Background Gradients -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden" aria-hidden="true">
+        <div class="absolute inset-0 bg-grid-light dark:bg-grid-dark opacity-[0.4] dark:opacity-20"></div>
+        <div
+            class="gpu-accelerated absolute top-0 -left-4 w-96 h-96 bg-primary/30 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[128px] animate-blob transform-gpu">
+        </div>
+        <div
+            class="gpu-accelerated absolute top-0 -right-4 w-96 h-96 bg-secondary/30 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[128px] animate-blob animation-delay-2000 transform-gpu">
+        </div>
+        <div
+            class="gpu-accelerated absolute -bottom-8 left-20 w-96 h-96 bg-accent/30 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[128px] animate-blob animation-delay-4000 transform-gpu">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 border-b border-gray-200 dark:border-white/5 bg-white/70 dark:bg-black/50 backdrop-blur-xl transition-colors duration-300"
+        aria-label="Primary navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#"
+                        class="block w-12 h-8 font-display font-bold text-2xl tracking-tight text-gray-900 dark:text-white hover:text-primary transition-colors"
+                        aria-label="Sanjay Sinha — home">S/S</a>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <div class="hidden md:flex items-baseline space-x-8">
+                        <a href="#about" class="text-sm font-medium hover:text-primary">About</a>
+                        <a href="#experience" class="text-sm font-medium hover:text-primary">Experience</a>
+                        <a href="#projects" class="text-sm font-medium hover:text-primary">Projects</a>
+                        <a href="#contact" class="text-sm font-medium hover:text-primary">Contact</a>
+                        <a href="https://github.com/Sanjay7549" target="_blank" rel="noopener noreferrer"
+                            class="text-sm font-medium hover:text-primary flex items-center gap-1.5"
+                            aria-label="GitHub profile (opens in new tab)">
+                            <i data-lucide="github" class="w-4 h-4" aria-hidden="true"></i> GitHub
+                        </a>
+                    </div>
+
+                    <!-- Theme Toggle Button -->
+                    <button type="button" id="theme-toggle" aria-label="Toggle Dark Mode"
+                        class="btn-interactive w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors focus:outline-none">
+                        <i data-lucide="moon" class="w-5 h-5 hidden dark:block" aria-hidden="true"></i>
+                        <i data-lucide="sun" class="w-5 h-5 block dark:hidden" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <!-- id="main-content" is the skip-navigation target -->
+    <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+
+        <!-- Hero Section -->
+        <section class="min-h-[70vh] flex flex-col-reverse md:flex-row items-center justify-between gap-10 mb-24"
+            aria-label="Introduction">
+
+            <!-- Left Side: Text -->
+            <div class="flex flex-col items-start max-w-2xl">
+                <div
+                    class="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm">
+                    <span class="relative flex h-2 w-2" aria-hidden="true">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    <span class="text-xs font-semibold text-gray-800 dark:text-white tracking-wide uppercase">Open to
+                        Innovation</span>
+                </div>
+
+                <h1
+                    class="font-display text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+                    Engineering secure,<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary relative">
+                        intelligent systems.
+                    </span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
+                    Hi, I'm <span class="font-bold text-gray-900 dark:text-white">Sanjay Sinha</span>.
+                    Data Scientist at <span class="text-blue-700 dark:text-blue-400 font-medium">Michelin</span>.
+                    I combine mathematical rigor with production engineering to build enterprise-grade RAG
+                    architectures,
+                    optimized inference pipelines, and autonomous agentic workflows.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects"
+                        class="group relative px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-black font-semibold rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-primary/25">
+                        <span class="relative flex items-center gap-2">
+                            View Work <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+                        </span>
+                    </a>
+
+                    <a href="https://github.com/Sanjay7549" target="_blank" rel="noopener noreferrer"
+                        class="px-6 py-3 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white font-medium rounded-lg hover:bg-gray-200 dark:hover:bg-white/10 flex items-center gap-2"
+                        aria-label="GitHub profile (opens in new tab)">
+                        <i data-lucide="github" class="w-5 h-5" aria-hidden="true"></i> GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Profile Picture -->
+            <div class="relative w-64 h-64 md:w-80 md:h-80 shrink-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur-2xl opacity-40 animate-pulse"
+                    aria-hidden="true">
+                </div>
+                <div class="relative w-full h-full rounded-full border-4 border-white/20 overflow-hidden shadow-2xl">
+                    <img src="images/profile.webp" alt="Profile photo of Sanjay Sinha" width="500" height="409"
+                        sizes="(max-width: 768px) 256px, 320px" fetchpriority="high" decoding="async"
+                        class="w-full h-full object-cover bg-gray-100 dark:bg-gray-800">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Bento Grid: About & Stack -->
+        <section id="about"
+            class="mb-32 fade-on-scroll [content-visibility:auto] [contain-intrinsic-size:1000px_1000px]"
+            aria-labelledby="about-heading">
+            <h2 id="about-heading" class="sr-only">About Me &amp; Tech Stack</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-auto md:auto-rows-[180px]">
+
+                <!-- Main About Card (2x2) -->
+                <div
+                    class="glass-card col-span-1 md:col-span-2 row-span-1 md:row-span-2 rounded-3xl p-8 flex flex-col justify-between group bg-white dark:bg-darkSurface">
+                    <div>
+                        <div
+                            class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:rotate-12 transition-transform duration-300"
+                            aria-hidden="true">
+                            <i data-lucide="network" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-3">Engineering &amp;
+                            Architecture</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm md:text-base">
+                            I focus on the "Science" in Data Science—optimizing for latency, cost, and security.
+                            Currently architecting <strong class="text-gray-900 dark:text-white">Michelin's primary
+                                Enterprise RAG system</strong> using Azure OpenAI.
+                            I build configuration-driven, observable systems that scale beyond notebooks into
+                            production.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-md text-xs font-mono text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/5">Azure
+                            OpenAI</span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-md text-xs font-mono text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/5">Python</span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-md text-xs font-mono text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/5">FastAPI</span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-md text-xs font-mono text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/5">LangChain</span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-md text-xs font-mono text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/5">LlamaIndex</span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-md text-xs font-mono text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/5">Ollama</span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-md text-xs font-mono text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/5">Qdrant</span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-md text-xs font-mono text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/5">Mistral</span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 dark:bg-white/5 rounded-md text-xs font-mono text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/5">OpenTelemetry</span>
+                    </div>
+                </div>
+
+                <!-- Location Card (1x1) -->
+                <div
+                    class="glass-card col-span-1 rounded-3xl relative overflow-hidden flex flex-col justify-center items-center group min-h-[180px]">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 opacity-50 z-0"
+                        aria-hidden="true">
+                    </div>
+                    <div class="relative z-10 text-center">
+                        <div
+                            class="w-14 h-14 mx-auto bg-white dark:bg-white/10 rounded-full flex items-center justify-center shadow-sm mb-3 text-primary animate-bounce"
+                            aria-hidden="true">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Pune, India</h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400">Base of Operations</p>
+                    </div>
+                </div>
+
+                <!-- LinkedIn Card (1x1) -->
+                <a href="https://linkedin.com/in/sanjay-sinha-09343b247" target="_blank" rel="noopener noreferrer"
+                    class="glass-card col-span-1 rounded-3xl p-6 flex flex-col justify-center items-center hover:bg-[#0077b5] hover:border-[#0077b5] group cursor-pointer min-h-[180px]"
+                    aria-label="Connect with Sanjay Sinha on LinkedIn (opens in new tab)">
+                    <i data-lucide="linkedin" class="w-10 h-10 text-[#0077b5] group-hover:text-white mb-3" aria-hidden="true"></i>
+                    <p class="font-bold text-gray-900 dark:text-white group-hover:text-white">Connect
+                    </p>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 group-hover:text-white/80 mt-1">
+                        Sanjay Sinha</p>
+                </a>
+
+                <!-- Skills & Technologies (2x1) -->
+                <div
+                    class="glass-card col-span-1 md:col-span-2 rounded-3xl overflow-hidden flex flex-col justify-center bg-gray-50 dark:bg-white/5 p-6 min-h-[180px]">
+                    <p
+                        class="text-center text-xs font-bold text-gray-600 dark:text-gray-400 uppercase tracking-widest mb-4">
+                        Core Skills &amp; Technologies</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Column 1 -->
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2 text-sm text-gray-800 dark:text-gray-200">
+                                <i data-lucide="cpu" class="w-4 h-4 text-secondary" aria-hidden="true"></i> LLMs / LlamaIndex
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-800 dark:text-gray-200">
+                                <i data-lucide="database" class="w-4 h-4 text-primary" aria-hidden="true"></i> Qdrant / FAISS
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-800 dark:text-gray-200">
+                                <i data-lucide="container" class="w-4 h-4 text-accent" aria-hidden="true"></i> Docker / K8s
+                            </div>
+                        </div>
+                        <!-- Column 2 -->
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2 text-sm text-gray-800 dark:text-gray-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-primary" aria-hidden="true"></i> ForgeRock / Auth
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-800 dark:text-gray-200">
+                                <i data-lucide="sigma" class="w-4 h-4 text-secondary" aria-hidden="true"></i> Math Simulation
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-800 dark:text-gray-200">
+                                <i data-lucide="globe" class="w-4 h-4 text-accent" aria-hidden="true"></i> REST APIs / Azure
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Years (1x1) -->
+                <div
+                    class="glass-card col-span-1 rounded-3xl p-6 flex flex-col justify-center text-center bg-white dark:bg-darkSurface min-h-[180px]">
+                    <h3
+                        class="text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary">
+                        2.5+</h3>
+                    <p class="text-xs font-medium text-gray-600 dark:text-gray-400 mt-2 uppercase tracking-wide">Years
+                        Experience</p>
+                </div>
+
+                <!-- Education (1x1) -->
+                <div
+                    class="glass-card col-span-1 rounded-3xl p-6 flex flex-col justify-between bg-gradient-to-br from-gray-50 to-gray-100 dark:from-surface dark:to-surfaceHighlight border dark:border-white/5 min-h-[180px]">
+                    <div class="flex justify-between items-start">
+                        <i data-lucide="graduation-cap" class="text-secondary w-6 h-6" aria-hidden="true"></i>
+                        <span class="text-xs text-gray-600 font-mono">2022-24</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white text-md leading-tight">M.Sc Data Science</h3>
+                        <p class="text-[10px] text-gray-600 dark:text-gray-400 mt-1 uppercase">Chennai Mathematical
+                            Inst.</p>
+                        <p class="text-[10px] text-blue-700 dark:text-blue-400 mt-1 font-medium">Mathematical Rigor</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mb-32 fade-on-scroll cv-auto" aria-labelledby="experience-heading">
+            <h2 id="experience-heading"
+                class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-10 flex items-center gap-3">
+                <i data-lucide="briefcase" class="text-primary" aria-hidden="true"></i> Professional Journey
+            </h2>
+
+            <div class="relative border-l-2 border-gray-200 dark:border-white/10 ml-3 md:ml-6 space-y-16">
+
+                <!-- Role 1: Michelin (Current) -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div
+                        class="absolute -left-[9px] top-2 h-4 w-4 rounded-full bg-primary ring-4 ring-gray-50 dark:ring-darkBg transition-transform group-hover:scale-110"
+                        aria-hidden="true">
+                    </div>
+
+                    <div
+                        class="glass-card p-6 md:p-8 rounded-2xl bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Data Scientist</h3>
+                                <p class="text-blue-700 dark:text-blue-400 font-medium">Michelin India Pvt. Ltd.</p>
+                            </div>
+                            <span
+                                class="mt-2 sm:mt-0 text-sm font-mono text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-white/5 px-3 py-1 rounded-full">Jun
+                                2024 - Present</span>
+                        </div>
+
+                        <p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                            Spearheading the primary, enterprise-grade RAG initiative leveraging <strong>LlamaCloud
+                                parsing</strong> and <strong>Azure OpenAI</strong>. I focus on orchestrating complex
+                            model interactions between <strong>GPT-4o</strong> and <strong>GPT-4o-mini</strong> to
+                            balance reasoning capabilities with cost efficiency.
+                        </p>
+
+                        <!-- Expandable Details -->
+                        <div class="mt-6">
+                            <button type="button"
+                                class="js-details-toggle flex items-center gap-2 text-sm font-semibold text-blue-700 dark:text-blue-400 hover:text-blue-900"
+                                data-target="details-michelin" aria-expanded="false" aria-controls="details-michelin">
+                                <span id="btn-text-details-michelin">Show Engineering Deep Dive (Primary RAG)</span>
+                                <i data-lucide="chevron-down" id="icon-details-michelin"
+                                    class="w-4 h-4 transition-transform" aria-hidden="true"></i>
+                            </button>
+
+                            <div id="details-michelin"
+                                class="expand-content mt-4 border-t border-gray-200 dark:border-white/10 pt-4 hidden">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div>
+                                        <h4
+                                            class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-3">
+                                            Key Achievements (Primary RAG)</h4>
+                                        <ul class="custom-bullets text-sm text-gray-700 dark:text-gray-300 space-y-2">
+                                            <li><strong>Advanced Model Routing:</strong> Architected a routing layer
+                                                that dispatches complex queries to <strong>GPT-4o</strong> for deep
+                                                reasoning and simple grading/filtering tasks to
+                                                <strong>GPT-4o-mini</strong>, optimizing token costs.
+                                            </li>
+                                            <li><strong>Config-Driven Architecture:</strong> Implemented a global
+                                                configuration system allowing new use cases (prompts, feature flags)
+                                                without code deployment.</li>
+                                            <li><strong>Latency Optimization:</strong> Slashed end-to-end query latency
+                                                from <strong>10-12s down to 6-7s</strong> by implementing parallelized
+                                                async execution for retrieval and tool calls.
+                                            </li>
+                                            <li><strong>Observability:</strong> Integrated
+                                                <strong>OpenTelemetry</strong> traces with Application Insights to track
+                                                latency bottlenecks and token consumption per request.
+                                            </li>
+                                            <li><strong>LlamaCloud Integration:</strong> Built a robust pipeline to
+                                                ingest complex documents via LlamaCloud parsing, persisting processed
+                                                artifacts to the Cloud Data Lake (CDL).</li>
+                                        </ul>
+
+                                        <!-- Stats -->
+                                        <div
+                                            class="mt-4 p-4 bg-gray-50 dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/5">
+                                            <p
+                                                class="text-xs font-bold text-gray-600 dark:text-gray-400 uppercase mb-2">
+                                                Impact Metrics</p>
+                                            <div class="grid grid-cols-2 gap-3">
+                                                <div class="text-center">
+                                                    <div class="text-2xl font-bold text-primary">40%</div>
+                                                    <div class="text-xs text-gray-600 dark:text-gray-400">Latency
+                                                        Reduction</div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="text-2xl font-bold text-secondary">99.9%</div>
+                                                    <div class="text-xs text-gray-600 dark:text-gray-400">Uptime</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-3">
+                                            Impact &amp; Strengths</h4>
+                                        <ul class="custom-bullets text-sm text-gray-700 dark:text-gray-300 space-y-2">
+                                            <li><strong>Security Posture:</strong> Integrated <strong>ForgeRock
+                                                    OAuth</strong> with custom Streamlit UI front-ends, enforcing strict
+                                                access control.</li>
+                                            <li><strong>Operational Excellence:</strong> Built a reusable RAG framework
+                                                that serves as the blueprint for future AI initiatives at Michelin.</li>
+                                            <li><strong>Proactive Optimization:</strong> Prototyped memory caching
+                                                patterns (MongoDB) to handle FAQ-style queries without LLM invocation.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 2: Michelin Intern -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div
+                        class="absolute -left-[9px] top-2 h-4 w-4 rounded-full bg-gray-300 dark:bg-gray-700 ring-4 ring-gray-50 dark:ring-darkBg transition-transform group-hover:scale-110"
+                        aria-hidden="true">
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Data Science Intern</h3>
+                        <span class="text-xs font-mono text-gray-600 dark:text-gray-400">Dec 2023 - Apr 2024</span>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Michelin India Pvt. Ltd.</p>
+                    <ul class="custom-bullets text-gray-700 dark:text-gray-300 text-sm">
+                        <li>Developed computer vision explainability pipelines (<strong>DRISE</strong>) to generate
+                            saliency maps for DNN model interpretation.</li>
+                        <li>Researched counterfactual approaches for LLM explainability.</li>
+                        <li>Automated SharePoint data extraction using robust web scraping techniques.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 3: Tata Comm -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div
+                        class="absolute -left-[9px] top-2 h-4 w-4 rounded-full bg-gray-300 dark:bg-gray-700 ring-4 ring-gray-50 dark:ring-darkBg transition-transform group-hover:scale-110"
+                        aria-hidden="true">
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Data Science Intern</h3>
+                        <span class="text-xs font-mono text-gray-600 dark:text-gray-400">May 2023 - Dec 2023</span>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Tata Communications Limited</p>
+                    <ul class="custom-bullets text-gray-700 dark:text-gray-300 text-sm">
+                        <li>Engineered a robust ETL pipeline for processing netflow data with automated daily updates.
+                        </li>
+                        <li>Applied Graph Theory (PageRank, Centrality) to identify critical network nodes and
+                            anomalies.</li>
+                        <li>Built interactive dashboards for network traffic analysis and forecasting.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects & Research Section -->
+        <section id="projects" class="mb-32 fade-on-scroll cv-auto" aria-labelledby="projects-heading">
+            <h2 id="projects-heading"
+                class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-10 flex items-center gap-3">
+                <i data-lucide="flask-conical" class="text-secondary" aria-hidden="true"></i> Projects &amp; R&amp;D
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Project 1: Open-Source On-Prem RAG -->
+                <article
+                    class="glass-card rounded-2xl overflow-hidden flex flex-col h-full bg-white dark:bg-darkSurface group">
+                    <div class="h-40 relative flex items-center justify-center overflow-hidden bg-gray-900">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                            data-src="images/RAG.webp" alt="Air-Gapped RAG system architecture" width="600" height="300"
+                            class="lazy-image absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent" aria-hidden="true"></div>
+                        <i data-lucide="lock"
+                            class="w-12 h-12 text-white/50 relative z-10 group-hover:scale-110 transition-transform"
+                            aria-hidden="true"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Air-Gapped RAG POC</h3>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 flex-1">
+                            A fully offline, secure RAG system designed for sensitive infrastructure.
+                            Leveraged <strong>Mistral</strong> for reasoning and <strong>Phi-3-Vision</strong> for
+                            multi-modal capabilities.
+                            Utilizes Qdrant for local vector storage and Docling for parsing.
+                        </p>
+
+                        <!-- Stats -->
+                        <div
+                            class="mb-4 p-3 bg-gray-50 dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/5">
+                            <div class="grid grid-cols-2 gap-2 text-center">
+                                <div>
+                                    <div class="text-sm font-bold text-primary">100%</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400">On-prem</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-secondary">Zero</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400">Data Leakage</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-primary/10 px-2 py-1 rounded">Mistral</span>
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-primary/10 px-2 py-1 rounded">Phi-3-Vision</span>
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-primary/10 px-2 py-1 rounded">Qdrant</span>
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-primary/10 px-2 py-1 rounded">Docker</span>
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-primary/10 px-2 py-1 rounded">Ollama</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: EV Systems Modelling -->
+                <article
+                    class="glass-card rounded-2xl overflow-hidden flex flex-col h-full bg-white dark:bg-darkSurface group">
+                    <div class="h-40 relative flex items-center justify-center overflow-hidden bg-gray-900">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                            data-src="images/EV.webp" alt="EV Market Simulation dashboard" width="600" height="300"
+                            class="lazy-image absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent" aria-hidden="true"></div>
+                        <i data-lucide="zap"
+                            class="w-12 h-12 text-white/50 relative z-10 group-hover:scale-110 transition-transform"
+                            aria-hidden="true"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">EV Market Simulation</h3>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 flex-1">
+                            A comprehensive system for the French EV market combining <strong>ML forecasting</strong>
+                            with <strong>Mathematical Simulation</strong>.
+                            It processes historical data to forecast trends and simulates car parc evolution under
+                            various theoretical scenarios.
+                        </p>
+                        <!-- Stats -->
+                        <div
+                            class="mb-4 p-3 bg-gray-50 dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/5">
+                            <div class="grid grid-cols-2 gap-2 text-center">
+                                <div>
+                                    <div class="text-sm font-bold text-secondary">10+</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400">Scenarios</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-accent">95%</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400">Accuracy</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-secondary/10 px-2 py-1 rounded">Math/Sim</span>
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-secondary/10 px-2 py-1 rounded">FastAPI</span>
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-secondary/10 px-2 py-1 rounded">Streamlit</span>
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-secondary/10 px-2 py-1 rounded">ML
+                                Modelling</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: DevOps Agents -->
+                <article
+                    class="glass-card rounded-2xl overflow-hidden flex flex-col h-full bg-white dark:bg-darkSurface group">
+                    <div class="h-40 relative flex items-center justify-center overflow-hidden bg-gray-900">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                            data-src="images/Agent.webp" alt="DevOps and Jira multi-agent system" width="600" height="300"
+                            class="lazy-image absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent" aria-hidden="true"></div>
+                        <i data-lucide="bot"
+                            class="w-12 h-12 text-white/50 relative z-10 group-hover:scale-110 transition-transform"
+                            aria-hidden="true"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">DevOps &amp; Jira Agents</h3>
+                        <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 flex-1">
+                            Built on <strong>Azure AI Foundry</strong>, this system orchestrates agents to interact with
+                            Jira and Azure DevOps via <strong>REST API calls</strong>.
+                            It autonomously lists issues, fetches build details, and surfaces pipeline commits to
+                            streamline developer operations.
+                        </p>
+
+                        <!-- Stats -->
+                        <div
+                            class="mb-4 p-3 bg-gray-50 dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/5">
+                            <div class="grid grid-cols-2 gap-2 text-center">
+                                <div>
+                                    <div class="text-sm font-bold text-accent">80%</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400">Time Saved</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-primary">24/7</div>
+                                    <div class="text-xs text-gray-600 dark:text-gray-400">Automation</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-accent/10 px-2 py-1 rounded">Azure
+                                AI
+                                Foundry</span>
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-accent/10 px-2 py-1 rounded">Agents</span>
+                            <span
+                                class="text-[10px] font-bold text-gray-800 dark:text-white bg-accent/10 px-2 py-1 rounded">REST
+                                APIs</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact"
+            class="max-w-3xl mx-auto text-center fade-on-scroll [content-visibility:auto] [contain-intrinsic-size:800px_600px]"
+            aria-labelledby="contact-heading">
+            <div class="glass-card p-10 rounded-3xl bg-white dark:bg-white/5 relative overflow-hidden">
+                <!-- Decorative background blob -->
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full filter blur-[80px] -translate-y-1/2 translate-x-1/2"
+                    aria-hidden="true">
+                </div>
+
+                <h2 id="contact-heading"
+                    class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-4 relative z-10">Ready to
+                    collaborate?</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8 relative z-10">
+                    Always open to discussing secure AI architectures, research opportunities, or the future of agentic
+                    systems.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+                    <button type="button" id="btn-copy-email" data-email="admin@${EMAIL_DOMAIN}"
+                        class="btn-interactive w-full sm:w-auto px-8 py-3 bg-gray-900 dark:bg-white text-white dark:text-black font-bold rounded-full transition-transform active:scale-95 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+                        <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i>
+                        <span id="email-text">Copy Email</span>
+                    </button>
+                    <a href="https://linkedin.com/in/sanjay-sinha-09343b247" target="_blank" rel="noopener noreferrer"
+                        class="w-full sm:w-auto px-8 py-3 bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-medium rounded-full hover:bg-gray-100 dark:hover:bg-white/5 flex items-center justify-center gap-2"
+                        aria-label="Connect on LinkedIn (opens in new tab)">
+                        <i data-lucide="linkedin" class="w-4 h-4" aria-hidden="true"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/Sanjay7549" target="_blank" rel="noopener noreferrer"
+                        class="w-full sm:w-auto px-8 py-3 bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-medium rounded-full hover:bg-gray-100 dark:hover:bg-white/5 flex items-center justify-center gap-2"
+                        aria-label="View GitHub profile (opens in new tab)">
+                        <i data-lucide="github" class="w-4 h-4" aria-hidden="true"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer
+        class="border-t border-gray-200 dark:border-white/5 bg-white dark:bg-black/50 py-8 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <!-- Footer year is set to a static value and updated by main.js on DOMContentLoaded.
+                 The inline script that previously ran here has been consolidated into main.js
+                 to avoid a render-blocking script in the document body. -->
+            <p class="text-gray-500 text-sm">
+                &copy; <span id="current-year">2026</span> Sanjay Sinha.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

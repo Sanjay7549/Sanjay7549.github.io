@@ -1,0 +1,16 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Docker build artifacts
+.docker/
+
+# Ignore Python cache (just in case you use scripts later)
+__pycache__/
+*.pyc
+
+# Ignore Environment variables (Security)
+.env
+
+# Node.js Dependencies
+node_modules/

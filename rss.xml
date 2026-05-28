@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sanjay Sinha - Project Updates</title>
+    <link>https://${DOMAIN_NAME}</link>
+    <atom:link href="https://${DOMAIN_NAME}/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Latest project launches and major updates from Sanjay Sinha, Data Scientist specializing in Enterprise RAG systems and Azure AI.</description>
+    <language>en-us</language>
+    <lastBuildDate>${RSS_DATE}</lastBuildDate>
+    <ttl>1440</ttl>
+    <image>
+      <url>https://${DOMAIN_NAME}/images/profile.png</url>
+      <title>Sanjay Sinha - Project Updates</title>
+      <link>https://${DOMAIN_NAME}</link>
+    </image>
+    
+    <item>
+      <title>Portfolio Website Launch</title>
+      <link>https://${DOMAIN_NAME}</link>
+      <guid>https://${DOMAIN_NAME}/#launch</guid>
+      <description>Launched professional portfolio showcasing Enterprise RAG systems, Azure OpenAI expertise, and production AI architectures. Featured projects: Air-Gapped RAG POC, EV Market Simulation, and DevOps Automation Agents.</description>
+      <pubDate>Mon, 05 May 2025 12:00:00 GMT</pubDate>
+      <category>Portfolio</category>
+      <category>AI Engineering</category>
+    </item>
+
+    <item>
+      <title>Enterprise RAG System at Michelin</title>
+      <link>https://${DOMAIN_NAME}/#experience</link>
+      <guid>https://${DOMAIN_NAME}/#michelin-rag</guid>
+      <description>Leading architecture of Michelin's primary Enterprise RAG system using Azure OpenAI, LlamaCloud, and advanced model routing. Achieved 40% latency reduction through parallelized async execution and intelligent GPT-4o/GPT-4o-mini routing.</description>
+      <pubDate>Fri, 17 Oct 2025 12:00:00 GMT</pubDate>
+      <category>RAG Systems</category>
+      <category>Azure OpenAI</category>
+      <category>Enterprise AI</category>
+    </item>
+
+    <item>
+      <title>Air-Gapped RAG POC Released</title>
+      <link>https://${DOMAIN_NAME}/#projects</link>
+      <guid>https://${DOMAIN_NAME}/#project-airgap-rag</guid>
+      <description>Built fully offline, secure RAG system for sensitive infrastructure using Mistral, Phi-3-Vision, and Qdrant. Zero data leakage, 100% on-premise deployment with multi-modal document processing capabilities.</description>
+      <pubDate>Thu, 05 Dec 2024 12:00:00 GMT</pubDate>
+      <category>Security</category>
+      <category>On-Premise AI</category>
+      <category>RAG</category>
+    </item>
+
+    <item>
+      <title>EV Market Simulation System</title>
+      <link>https://${DOMAIN_NAME}/#projects</link>
+      <guid>https://${DOMAIN_NAME}/#project-ev-sim</guid>
+      <description>Comprehensive mathematical simulation system for French EV market combining ML forecasting with scenario modeling. Achieves 95% accuracy across 10+ market scenarios.</description>
+      <pubDate>Mon, 18 Aug 2025 12:00:00 GMT</pubDate>
+      <category>Mathematical Modeling</category>
+      <category>ML Forecasting</category>
+    </item>
+
+    <item>
+      <title>DevOps Automation Agents</title>
+      <link>https://${DOMAIN_NAME}/#projects</link>
+      <guid>https://${DOMAIN_NAME}/#project-devops-agents</guid>
+      <description>Autonomous agents on Azure AI Foundry integrating Jira and Azure DevOps via REST APIs. Delivers 80% time savings with 24/7 automated issue tracking and pipeline monitoring.</description>
+      <pubDate>Wed, 10 Dec 2025 12:00:00 GMT</pubDate>
+      <category>Agentic AI</category>
+      <category>DevOps</category>
+    </item>
+  </channel>
+</rss>

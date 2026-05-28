@@ -1,0 +1,56 @@
+# Sanjay Sinha — AI & Data Scientist
+
+> Data Scientist at Michelin specializing in Enterprise RAG systems,
+> Azure OpenAI, LlamaIndex, LangChain, and production AI architectures.
+> Graduate of Chennai Mathematical Institute (M.Sc Data Science, 2024).
+
+## Core Competencies
+
+- Enterprise RAG architecture: LlamaIndex, LlamaCloud, LangChain, Qdrant, Mistral AI
+- Azure AI: Azure OpenAI (GPT-4o, GPT-4o-mini), Azure AI Foundry, Azure DevOps
+- Production infrastructure: Docker, Kubernetes, FastAPI, OpenTelemetry
+- Mathematical modeling: simulation, ML forecasting, systems modeling
+- Security: ForgeRock OAuth, zero-trust architectures, secure LLM pipelines
+- Observability: OpenTelemetry tracing for LLM pipelines
+
+## Projects
+
+### Enterprise RAG System (Michelin)
+Lead architect for Michelin's primary production RAG system. Implemented
+advanced model routing between GPT-4o and GPT-4o-mini, reducing latency
+from 10-12s to 6-7s with cost optimization. Integrates LlamaCloud parsing,
+OpenTelemetry observability, and ForgeRock OAuth security.
+
+### EV Market Simulation (Michelin France)
+Combines ML forecasting with mathematical simulation for the French EV market.
+Processes historical data to forecast trends and simulates car parc evolution
+under 10+ theoretical scenarios with 95% accuracy. Stack: FastAPI, Streamlit.
+
+### DevOps & Jira Agents (Azure AI Foundry)
+Multi-agent system built on Azure AI Foundry that autonomously interacts with
+Jira and Azure DevOps via REST API. Lists issues, fetches build details, and
+surfaces pipeline commits. Delivers 80% time savings in developer operations.
+
+## Education
+
+- M.Sc Data Science, Chennai Mathematical Institute (CMI), 2024
+  Focus: mathematical rigor, theoretical AI foundations, production engineering
+
+## Contact
+
+- Website: https://${DOMAIN_NAME}
+- LinkedIn: https://linkedin.com/in/sanjay-sinha-09343b247
+- GitHub: https://github.com/Sanjay7549
+- Email: admin@${EMAIL_DOMAIN}
+
+## Professional Context
+
+- Current role: Data Scientist, Michelin India Pvt. Ltd., Pune, Maharashtra
+- Open to: research collaboration, enterprise AI architecture consulting,
+  agentic system design discussions
+
+## Optional
+
+- /index.html: Full portfolio with detailed project descriptions and experience timeline
+- /security-policy.html: Security disclosure policy
+- /rss.xml: Project and update feed
