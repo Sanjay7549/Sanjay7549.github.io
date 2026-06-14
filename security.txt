@@ -1,6 +1,0 @@
-Contact: mailto:admin@${EMAIL_DOMAIN}
-Expires: 2026-12-31T23:00:00.000Z
-Preferred-Languages: en
-Canonical: https://${DOMAIN_NAME}/.well-known/security.txt
-Policy: https://${DOMAIN_NAME}/security-policy.html
-Hiring: https://${DOMAIN_NAME}/#contact

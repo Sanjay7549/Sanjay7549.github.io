@@ -136,7 +136,7 @@ function loadGTM() {
     if (window.gtmLoaded) return;
 
     // The entrypoint.sh will replace this string.
-    const gtagId = '${GTAG_ID}';
+    const gtagId = '';
 
     // Abort if gtagId is empty (Dev environment) or failed to substitute
     if (!gtagId || gtagId === '' || gtagId.startsWith('$')) {
