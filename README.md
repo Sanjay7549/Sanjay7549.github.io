@@ -1,3 +1,3 @@
 ## My Websites
 
-- Portfolio: https://about.sanjaysinha.dev
+- Portfolio: https://sanjaysinha.dev
